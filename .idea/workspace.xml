@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="056f9159-4f8a-4f5d-8453-71f590daea93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DisZen-Node.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/event_handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    <list default="true" id="056f9159-4f8a-4f5d-8453-71f590daea93" name="Changes" comment="Fixed some things, added some other things">
       <change beforePath="$PROJECT_DIR$/modules/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/information.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +65,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630863623869</updated>
-      <workItem from="1630863626624" duration="484000" />
+      <workItem from="1630863626624" duration="832000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed some things, added some other things">
+      <created>1630864366770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630864366770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +93,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Fixed some things, added some other things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some things, added some other things" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

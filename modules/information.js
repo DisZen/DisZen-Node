@@ -37,5 +37,5 @@ const commands = [
         }
     }
 ];
-
+//bla bla
 module.exports = {name: "Information", commands: commands};
