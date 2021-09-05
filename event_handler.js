@@ -1,3 +1,5 @@
+const { DiscordAPIError } = require("discord.js");
+
 class EventHandler {
     constructor(client) {
         this.client = client;
@@ -32,10 +34,19 @@ class EventHandler {
         const command = this.client.commands.get(commandName) || 
             this.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         if (!command) return;
-    
+
+        if (command.permissions) {
+            for (const flag of command.permissions) {
+                if (!message.member.permissions.has(flag)) {
+                    return message.channel.send("You do not have the permission to execute this command.");
+                }
+            }
+        }
+
         try {
             command.execute(this.client, message, messageArgs);
         } catch (err) {
+            console.log(err);
             console.error(err);
         }
     }
