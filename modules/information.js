@@ -7,7 +7,7 @@ const commands = [
         usage: "[module | command]",
         description: "Sends a help message",
         execute(client, message, args) {
-            var embed = new Discord.MessageEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setAuthor(client.user.tag, client.user.displayAvatarURL({dynamic: true, size: 4096}));
 
             if (!args.length) {
@@ -16,15 +16,15 @@ const commands = [
             } else {
                 const arg = args.join(" ");
 
-                const mod = client.modules.get(arg) || 
-                    client.modules.find(mod => mod.name.toLowerCase() == arg.toLowerCase());
+                const mod = client.modules.get(arg) ||
+                    client.modules.find(mod => mod.name.toLowerCase() === arg.toLowerCase());
                 if (mod) {
                     embed.setDescription("Commands - " + mod.commands.length);
                     mod.commands.forEach(cmd => embed.addField(cmd.name, cmd.name));
                     return message.channel.send({embeds: [embed]});
                 }
-                
-                const command = client.commands.get(arg.toLowerCase()) || 
+
+                const command = client.commands.get(arg.toLowerCase()) ||
                     client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(arg.toLowerCase()));
                 if (command) {
                     embed.setDescription("Name - " + command.name);

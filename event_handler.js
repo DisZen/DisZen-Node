@@ -17,21 +17,21 @@ class EventHandler {
     }
 
     onMemberJoin(member) {
-        member.guild.channels.cache.find(ch => ch.name == 'welcome').send(member.user.tag + " joined the server :D");
+        member.guild.channels.cache.find(ch => ch.name === 'welcome').send(member.user.tag + " joined the server :D");
     }
 
     onMemberRemove(member) {
-        member.guild.channels.cache.find(ch => ch.name == 'welcome').send(member.user.tag + " left the server D;");
+        member.guild.channels.cache.find(ch => ch.name === 'welcome').send(member.user.tag + " left the server D;");
     }
 
     onMessage(message) {
-        if (message.author.bot || message.author.id == this.client.user.id) return;
+        if (message.author.bot || message.author.id === this.client.user.id) return;
         if (!message.content.startsWith(this.client.prefix)) return;
-    
+
         var messageArgs = message.content.trim().substring(1).split(' ');
         const commandName = messageArgs.shift().toLowerCase();
-    
-        const command = this.client.commands.get(commandName) || 
+
+        const command = this.client.commands.get(commandName) ||
             this.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         if (!command) return;
 
