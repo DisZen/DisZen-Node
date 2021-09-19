@@ -1,4 +1,6 @@
 const { DiscordAPIError } = require("discord.js");
+const { Context } = require('./command_handler');
+
 
 class EventHandler {
     constructor(client) {
@@ -44,7 +46,7 @@ class EventHandler {
         }
 
         try {
-            command.execute(this.client, message, messageArgs);
+            command.execute(new Context(this.client, message, messageArgs, command.module, command));
         } catch (err) {
             console.log(err);
             console.error(err);
